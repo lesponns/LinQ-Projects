@@ -20,8 +20,6 @@ namespace SmartPro_45_29_08_23_
                        in sayilar
                        select a;
 
-            
-                               
             foreach ( var item in list ) 
             {
                 Console.WriteLine( item );
@@ -30,7 +28,6 @@ namespace SmartPro_45_29_08_23_
             #endregion
 
             #region Low To High
-
             var LtH = from s
                       in sayilar
                       orderby s ascending
@@ -42,8 +39,6 @@ namespace SmartPro_45_29_08_23_
                 Console.WriteLine(item);
             }
             Console.WriteLine("----------\nListelendi.\n");
-
-
             #endregion
 
             #region High to Low 
@@ -91,8 +86,6 @@ namespace SmartPro_45_29_08_23_
                 Console.WriteLine(item);
             }
             #endregion
-
-
             #region 3 bölünebilen en büyük en küçük
 
             var quest = (from l
@@ -108,21 +101,13 @@ namespace SmartPro_45_29_08_23_
             Console.Write("\nEn Büyük: {0}\n", quest[0]) ;
             
             //2 Way
-
             var questv1 = from r
                           in sayilar
                           where r % 3 == 0
                           select r;
 
             Console.WriteLine("En büyük: {0}, En Küçük: {1}", questv1.Min(), questv1.Max());
-
-
-
-
-
-                          #endregion
-
-
+            #endregion
             Console.ReadKey();
         }
     }
